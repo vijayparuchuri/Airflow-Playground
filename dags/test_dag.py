@@ -41,7 +41,7 @@ def test_your_python_function():
     print("Test passed!")
 
 with DAG(
-    'example_dag11',
+    'example_dag12',
     default_args=default_args,
     description='An example DAG',
     schedule_interval=timedelta(days=1),

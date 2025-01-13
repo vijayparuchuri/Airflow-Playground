@@ -6,7 +6,7 @@ from airflow.operators.bash import BashOperator
 # Configuration that differs between dev and prod
 CONFIGS = {
     'dev': {
-        'email': ['paruchurivijay40@gmail.com'],
+        'email': ['paruchurivijay40@duck.com'],
         'retries': 1,
         'retry_delay': timedelta(minutes=1),
     }

@@ -6,19 +6,14 @@ from airflow.operators.bash import BashOperator
 # Configuration that differs between dev and prod
 CONFIGS = {
     'dev': {
-        'email': ['your-email@dev.com'],
+        'email': ['paruchurivijay40@gmail.com'],
         'retries': 1,
         'retry_delay': timedelta(minutes=1),
-    },
-    'prod': {
-        'email': ['your-email@prod.com'],
-        'retries': 3,
-        'retry_delay': timedelta(minutes=5),
     }
 }
 
 # Choose config based on environment
-env = 'prod'  # Change this to 'dev' for local testing
+env = 'dev'  # Change this to 'dev' for local testing
 config = CONFIGS[env]
 
 default_args = {
@@ -35,7 +30,7 @@ def your_python_function(**context):
     """
     Example Python function for DAG task
     """
-    print("Executing task!")
+    print("Executing task! Test")
     # Your code here
     return "Task completed"
 
@@ -46,7 +41,7 @@ def test_your_python_function():
     print("Test passed!")
 
 with DAG(
-    'example_dag',
+    'example_dag11',
     default_args=default_args,
     description='An example DAG',
     schedule_interval=timedelta(days=1),
